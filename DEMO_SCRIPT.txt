@@ -1,0 +1,23 @@
+[0:00 - HOOK]
+Hello everyone! Over 430 million people worldwide live with disabling hearing loss. Yet, most communication tools treat sign language translation as mere word-for-word substitution, completely missing ASL syntax rules, handshape parameters, and accessibility display requirements. Today, I am excited to present SignBridge Agent, an intelligent multi-agent accessibility assistant designed to solve this exact problem.
+
+[0:20 - WHAT IT IS]
+SignBridge Agent is built using Google's Agent Development Kit (ADK 2.0). Under the Agents for Good track, it bridges the gap between spoken English and American Sign Language gloss, providing real-time syntax checking, handshape breakdowns, and specialized display device formatting.
+
+[0:40 - SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see on screen, SignBridge Agent brings together three core pillars: an ADK Multi-Agent Architecture, a Model Context Protocol server, and automated security governance.
+
+[1:00 - ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's take a look at how data flows through the agent system. When a user submits a query, it first enters our Security Checkpoint node. This node scrubs sensitive personal information like phone numbers and emails, and checks for prompt injection attempts. Once verified, the request passes to our root orchestrator agent. The orchestrator delegates specialized tasks to sub-agents: translator_agent handles ASL gloss conversion and syntax checking, while accessibility_agent formats outputs for high-contrast or tactical display devices. Both agents leverage our custom MCP server for dictionary lookups and syntax validation.
+
+[2:00 - LIVE DEMO]
+(switch to playground at localhost:18081)
+Now let's watch SignBridge Agent in action inside the ADK Playground! First, let's test a complex translation query: "Translate 'hello, can you help me find a doctor?' into ASL gloss and check the handshapes." (pause) Notice how the orchestrator immediately invokes translator_agent, which queries the MCP dictionary to return the exact ASL gloss sequence and handshape movements. Next, let's test accessibility device formatting: "Format the message 'Emergency Assistance Required' for a high-contrast visual display device." (pause) The agent routes this request to accessibility_agent and invokes our MCP tool to produce formatted, high-contrast captions. Finally, let's test our security controls by submitting a string with an email and phone number: "Translate 'Please call doctor smith at 555-0199 or email test@example.com immediately.'" (pause) The security checkpoint redacts the PII to [REDACTED_PHONE] and [REDACTED_EMAIL], generating a structured audit log while safely processing the query.
+
+[3:00 - SECURITY & MCP]
+Our MCP server exposes four dedicated tools: dictionary_lookup, grammar_checker, accessibility_formatter, and sign_phrase_builder. Coupled with structured JSON audit logging and human-in-the-loop verification checkpoints for emergency medical terms, SignBridge ensures safety and trust.
+
+[3:30 - IMPACT / CLOSE]
+SignBridge Agent empowers Deaf and Hard-of-Hearing communities with accurate, respectful, and secure communication tools. Thank you for watching!
