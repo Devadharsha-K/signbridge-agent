@@ -106,9 +106,12 @@ Try these test queries in the local playground UI:
 
 ## 🎨 Assets
 
-- **Architecture Diagram:** `assets/architecture_diagram.png`
-- **Project Cover Banner:** `assets/cover_page_banner.png`
+**Architecture Diagram:**
 
+   ![Architecture Diagram](assets/architecture_diagram.png)
+**Project Cover Banner:**
+
+   ![Project Cover Banner](assets/cover_page_banner.png)
 ---
 
 ## 🎬 Demo Script
@@ -133,11 +136,12 @@ Refer to `DEMO_SCRIPT.txt` for a step-by-step spoken presentation script timed f
 1. Create a new repository at [GitHub New Repo](https://github.com/new) (Name: `signbridge-agent`).
 2. In your terminal, run:
    ```bash
+   cd signbridge-agent
    git init
    git add .
    git commit -m "Initial commit: SignBridge Agent ADK project"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/signbridge-agent.git
+   git remote add origin https://github.com/Devadharsha-K/signbridge-agent.git
    git push -u origin main
    ```
 ⚠️ **NEVER commit your `.env` file containing your API key!**
